@@ -7,7 +7,12 @@ angular.module('angularBase',[
     .state('hello', {
         url: '/hello',
         templateUrl: 'app/hello/hello.tpl.html',
-        controller: 'helloCtrl'
+        controller: 'helloCtrl',
+        resolve: {
+            resolveData: function(dataService){
+                return dataService.getData();
+            }
+        }
     });
     $urlRouterProvider.otherwise('/hello');
 });

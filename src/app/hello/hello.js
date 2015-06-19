@@ -1,4 +1,4 @@
 angular.module('angularBase')
-.controller('helloCtrl', function($scope){
-    $scope.data = "World!";
+.controller('helloCtrl', function($scope, resolveData){
+    $scope.data = resolveData.data;
 });
