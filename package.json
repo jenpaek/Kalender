@@ -1,0 +1,10 @@
+{
+  "name": "angular-base",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Elavon, Inc",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "grv-gulpfile": "~0.1.18"
+  }
+}
