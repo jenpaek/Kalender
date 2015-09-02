@@ -1,8 +1,12 @@
-angular.module('angularBase',[
-    'templates',
-    'ui.router'
-])
-.config(function($stateProvider, $urlRouterProvider){
+angular
+    .module('angularBase',[
+        'templates',
+        'ui.router',
+        'ui.router.state'
+    ])
+    .config(appConfig);
+
+function appConfig ($stateProvider, $urlRouterProvider){
     $stateProvider
     .state('hello', {
         url: '/hello',
@@ -15,4 +19,4 @@ angular.module('angularBase',[
         }
     });
     $urlRouterProvider.otherwise('/hello');
-});
+}

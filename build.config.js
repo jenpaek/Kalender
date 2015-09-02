@@ -21,8 +21,8 @@ module.exports = {
 
   vendorFiles: {
     js: [
-      'bower_components/angular/angular.js',
-      'bower_components/ui-router/release/angular-ui-router.js'
+      'vendor/angular/angular.js',
+      'vendor/ui-router/release/angular-ui-router.js'
     ],
     css: [
     ],
