@@ -2,21 +2,18 @@ angular
     .module('angularBase',[
         'templates',
         'ui.router',
-        'ui.router.state'
+        'ui.router.state',
+        'ngMaterial',
+        'ngAria'
     ])
     .config(appConfig);
 
 function appConfig ($stateProvider, $urlRouterProvider){
-    $stateProvider
-    .state('hello', {
+    $stateProvider.state('hello', {
         url: '/hello',
         templateUrl: 'app/hello/hello.tpl.html',
-        controller: 'helloCtrl',
-        resolve: {
-            resolveData: function(dataService){
-                return dataService.getData();
-            }
-        }
+        controller: 'helloCtrl'
     });
+
     $urlRouterProvider.otherwise('/hello');
 }
