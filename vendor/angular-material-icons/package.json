@@ -1,0 +1,53 @@
+{
+  "name": "angular-material-icons",
+  "version": "0.6.0",
+  "author": {
+    "name": "Urmil Parikh"
+  },
+  "description": "AngularJS directive to use Material Design icons with custom fill color and size.",
+  "main": "index.js",
+  "keywords": [
+    "angular",
+    "material",
+    "design",
+    "icon",
+    "fill",
+    "size",
+    "color",
+    "white",
+    "morph",
+    "svg",
+    "custom"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/klarsys/angular-material-icons",
+  "dependencies": {
+    "angular": ">1.3.x"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.3.0",
+    "jshint-stylish": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klarsys/angular-material-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/klarsys/angular-material-icons/issues"
+  },
+  "readme": "angular-material-icons\r\n======================\r\n\r\nAngularJS directive to use Material Design icons with custom fill-color and size.\r\n\r\nThis project encompasses all SVG icons from [Google's official Material Design Icon repository](https://github.com/google/material-design-icons) and few hand-picked icons from community-led [MaterialDesignIcons.com](http://materialdesignicons.com/) in form of angular directive that gives option to specify custom fill-color and size.\r\n\r\nChanges to icon will go through delightful morphing if [SVG-Morpheus](https://github.com/alexk111/SVG-Morpheus) is also included in your application.\r\n\r\n## Demo\r\n\r\nCheckout the [live demo](https://klarsys.github.io/angular-material-icons/) for usage instructions and a preview of all icons included in the set.\r\n\r\n## Licenses\r\n\r\nThis package is released under [MIT license](https://raw.githubusercontent.com/klarsys/angular-material-icons/master/LICENSE).\r\n\r\nIcons are released under [Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.",
+  "readmeFilename": "README.md",
+  "_id": "angular-material-icons@0.6.0",
+  "dist": {
+    "shasum": "824687fad68be1f13f353d2e58a3c3b2c4811a81"
+  },
+  "_from": "angular-material-icons@",
+  "_resolved": "https://svdlknxtgapp02.servers.global.prv/artifactory/api/npm/npm-registry/angular-material-icons/-/angular-material-icons-0.6.0.tgz"
+}

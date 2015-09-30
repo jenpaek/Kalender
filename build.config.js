@@ -26,7 +26,7 @@ module.exports = {
       'vendor/angular-animate/angular-animate.js',
       'vendor/angular-aria/angular-aria.js',
       'vendor/angular-material/angular-material.js',
-      'node_modules/angular-material-icons/angular-material-icons.min.js'
+      'vendor/angular-material-icons/angular-material-icons.min.js'
     ],
     css: [
       'vendor/angular-material/angular-material.css'
