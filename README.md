@@ -1,6 +1,6 @@
 # Kalender
-After fresh clone:
-npm install
-Run with livereload and mock data:
-gulp
+After fresh clone:__
+npm install__
+Run with livereload and mock data:__
+gulp__
 Then open a browser to 127.0.0.1:9002
