@@ -4,56 +4,55 @@ angular
         'ui.router',
         'ui.router.state',
         'ngMaterial',
-        'ngAria',
-        'ngMdIcons'
+        'ngAria'
     ])
     .config(appConfig);
 
 function appConfig ($stateProvider, $urlRouterProvider, $mdThemingProvider){
-    $stateProvider.state('hello', {
-        url: '/hello',
-        templateUrl: 'app/hello/hello.tpl.html',
-        controller: 'helloCtrl'
+    $stateProvider.state('home', {
+        url: '/home',
+        templateUrl: 'app/home/home.tpl.html',
+        controller: 'homeCtrl',
+        controllerAs: 'home',
     });
 
-    $urlRouterProvider.otherwise('/hello');
+    $urlRouterProvider.otherwise('/home');
 
     var customPrimary = {
-        '50': '#bbd9ed',
-        '100': '#a7cde8',
-        '200': '#93c2e3',
-        '300': '#7eb7de',
-        '400': '#6aabd8',
-        '500': '#56a0d3',
-        '600': '#4295ce',
-        '700': '#3388c3',
-        '800': '#2e7aaf',
-        '900': '#286c9b',
-        'A100': '#cfe4f3',
-        'A200': '#e4f0f8',
-        'A400': '#f8fbfd',
-        'A700': '#235e86',
-        'contrastDefaultColor': 'light'
+        '50': '#60d2ff',
+        '100': '#47cbff',
+        '200': '#2dc4ff',
+        '300': '#14bdff',
+        '400': '#00b3f9',
+        '500': '#00a1e0',
+        '600': '#008fc6',
+        '700': '#007cad',
+        '800': '#006a93',
+        '900': '#00587a',
+        'A100': '#7adaff',
+        'A200': '#93e1ff',
+        'A400': '#ade8ff',
+        'A700': '#004560'
     };
     $mdThemingProvider
         .definePalette('customPrimary', 
                         customPrimary);
 
     var customAccent = {
-        '50': '#c5df90',
-        '100': '#bad97c',
-        '200': '#b0d368',
-        '300': '#a6cd55',
-        '400': '#9bc841',
-        '500': '#8eb936',
-        '600': '#7fa530',
-        '700': '#70922a',
-        '800': '#617e25',
-        '900': '#516a1f',
-        'A100': '#cfe4a4',
-        'A200': '#d9eab7',
-        'A400': '#e4f0cb',
-        'A700': '#425619'
+        '50': '#ffdb74',
+        '100': '#ffd45b',
+        '200': '#ffcd41',
+        '300': '#ffc728',
+        '400': '#ffc00e',
+        '500': '#f4b400',
+        '600': '#daa100',
+        '700': '#c18e00',
+        '800': '#a77c00',
+        '900': '#8e6900',
+        'A100': '#ffe18e',
+        'A200': '#ffe8a7',
+        'A400': '#ffefc1',
+        'A700': '#745600'
     };
     $mdThemingProvider
         .definePalette('customAccent', 
@@ -101,7 +100,9 @@ function appConfig ($stateProvider, $urlRouterProvider, $mdThemingProvider){
 
    $mdThemingProvider.theme('default')
        .primaryPalette('customPrimary')
-       .accentPalette('customAccent')
+       .accentPalette('customAccent', {
+            'default': '500'
+       })
        .warnPalette('customWarn')
        .backgroundPalette('customBackground');
 }

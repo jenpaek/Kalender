@@ -1,0 +1,100 @@
+<div class="width-100">
+<md-toolbar layout="row" flex class="md-tall md-primary toolbar">
+	<section layout"row" layout-align="start end" flex="90" class="height-100">
+		<div layout="column" flex class="md-tall container">
+			<span flex></span>
+			<h2 class="md-toolbar-tools">
+				<span class="md-headline main-title">April 2016</span>
+			</h2>
+			<div>
+				<md-tabs md-stretch-tabs class="md-primary" md-selected="home.selectedIndex">
+					<md-tab id="monthView" aria-controls="monthViewContent">
+						Month
+					</md-tab>
+					<md-tab id="weekView" aria-controls="weekViewContent">
+						Week
+					</md-tab>
+					<md-tab id="dayView" aria-controls="dayViewContent">
+						Day
+					</md-tab>
+					<md-tab id="todayView" aria-controls="todayViewContent">
+						Today
+					</md-tab>
+				</md-tabs>	
+			</div>
+		</div>
+	</section>
+	<section layout="row" layout-align="center center" flex>
+		<md-menu md-position-mode="target-right target">
+			<md-button ng-click="home.openMenu($mdOpenMenu, $event)" aria-label="Menu" class="md-button md-icon-button">
+				<md-icon md-svg-src="assets/images/icons/dots-vertical.svg" class="md-32 md-light"></md-icon>
+			</md-button>
+			<md-menu-content width="4">
+		        <md-menu-item>
+					<md-button ng-click="home.openShare($event)">
+						<md-icon md-svg-icon="assets/images/icons/share-variant.svg" md-menu-align-target></md-icon>
+						Share
+					</md-button>
+		        </md-menu-item>
+		        <md-menu-item>
+					<md-button>
+						<md-icon md-svg-icon="assets/images/icons/email.svg" md-menu-align-target></md-icon>
+						Invitation Manager
+					</md-button>
+		        </md-menu-item>
+		        <md-menu-item>
+					<md-button>
+						<md-icon md-svg-icon="assets/images/icons/settings.svg" md-menu-align-target></md-icon>
+						Settings
+					</md-button>
+		        </md-menu-item>
+		        <!-- <md-menu-divider></md-menu-divider> -->
+		      </md-menu-content>
+		</md-menu>
+	</section>
+</md-toolbar>
+<div class="fab-home">
+	<md-button class="md-fab md-accent fab-home-button" aria-label="Add Event">
+		<md-icon md-svg-src="assets/images/icons/calendar-plus.svg" class="md-light"></md-icon>
+	</md-button>
+</div>
+<md-content class="container app-view">
+	<ng-switch on="home.selectedIndex" class="tabpanel-container">
+		<div id="monthViewContent"
+		   aria-labelledby="monthViewContent"
+		   ng-switch-when="0"
+		   md-swipe-left="next()"
+		   md-swipe-right="previous()"
+		   layout="row" layout-align="center center">
+		   
+		   <!-- placeholders to show content -->
+		   <img src="assets/images/calendar_background.png" ng-click="home.openSidebar()" class="calendar-placeholder-background"/>
+		</div>
+		<div id="weekViewContent"
+		   aria-labelledby="weekViewContent"
+		   ng-switch-when="1"
+		   md-swipe-left="next()"
+		   md-swipe-right="previous()"
+		   layout="row" layout-align="center center">
+		   Week View
+		</div>
+		<div id="dayViewContent"
+		   aria-labelledby="dayViewContent"
+		   ng-switch-when="2"
+		   md-swipe-left="next()"
+		   md-swipe-right="previous()"
+		   layout="row" layout-align="center center">
+		   Day View
+		</div>
+		<div id="todayViewContent"
+		   aria-labelledby="todayViewContent"
+		   ng-switch-when="3"
+		   md-swipe-left="next()"
+		   md-swipe-right="previous()"
+		   layout="row" layout-align="center center">
+		   Today View
+		</div>
+	</ng-switch>
+</md-content>
+</div>
+<ng-include src="'app/home/sidebar/sidebar.tpl.html'" class="overflow-visible"></ng-include>

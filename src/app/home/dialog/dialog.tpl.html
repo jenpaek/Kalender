@@ -1,0 +1,57 @@
+<md-dialog aria-label="Share Dialog" flex="50">
+	<md-dialog-content>
+		<section layout="row" flex>
+			<div layout="column" flex>
+				<span class="md-title">Share</span>
+				<span class="md-subtitle">Share your calendar with friends, family, and co-workers.</span>
+			</div>
+			<md-button class="md-icon-button" ng-click="share.close()">
+			  <md-icon md-svg-src="assets/images/icons/close.svg" aria-label="Close dialog"></md-icon>
+			</md-button>
+		</section>
+		<p>
+			<div class="md-subtitle">Members</div>
+			<p>
+				<span ng-repeat="member in share.avatarMembers" class="md-margin"><img ng-src="assets/images/avatars/{{member.img}}.png" class="avatars"></span>
+			</p>
+		</p>
+		<p>
+			<div class="md-subtitle">Non Members</div>
+			<p>
+				<span ng-repeat="nonmember in share.avatarNonMembers" class="md-margin"><img ng-src="assets/images/avatars/{{nonmember.img}}.png" class="avatars"></span>
+			</p>
+		</p>
+		<md-input-container class="width-100">
+			<label>+ Add a user</label>
+			<input id="addUserInput" name="addUserInput" ng-model="share.addUserInput">
+		</md-input-container>
+		<md-input-container class="width-100">
+			<label>Share all my...</label>
+			<md-select id="shareExtent" name="shareExtent" ng-model="share.shareExtent" >
+				<md-option ng-value="option.value" ng-repeat="option in share.shareExtentOptions">{{option.description}}</md-option>
+			</md-select>
+		</md-input-container>
+		<div class="md-title">Permissions</div>
+		Admin access allows a user to add, edit, and delete your events
+		<md-radio-group ng-model="share.permissions" layout="row" flex>
+			<md-radio-button value="admin" aria-label="radio-button Admin" class="md-primary">
+				Admin
+			</md-radio-button>
+			<md-radio-button value="view" aria-label="radio-button View Only" class="md-primary">
+				View Only
+			</md-radio-button>
+			<md-radio-button value="custom" aria-label="radio-button Custom" class="md-primary">
+				Custom
+			</md-radio-button>
+		</md-radio-group>
+
+	</md-dialog-content>
+	<md-dialog-actions layout="row" layout-align="end center">
+		<md-button ng-click="share.close()" class="md-button md-primary">
+			Cancel
+		</md-button>
+		<md-button ng-click="share.close()" class="md-button md-primary">
+			Send
+		</md-button>
+	</md-dialog-actions>
+</md-dialog>
